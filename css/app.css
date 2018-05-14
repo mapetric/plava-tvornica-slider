@@ -5,12 +5,24 @@
 
 /* sections */
 
+.owerflow-button {
+    background-color: Transparent;
+    border: solid #23CE6B 2px;
+    color: #23CE6B;
+    outline: none;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 15px;
+    padding: 10px;
+}
+
 .top,
 .bottom {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    flex-direction: column;
     height: 100px;
     margin: 50px auto;
     background-color: #272D2D;
