@@ -1,0 +1,28 @@
+{
+  "name": "plava-tvornica-slider",
+  "version": "1.0.0",
+  "description": "a project to create a slider",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mapetric/plava-tvornica-slider.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mapetric/plava-tvornica-slider/issues"
+  },
+  "homepage": "https://github.com/mapetric/plava-tvornica-slider#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-sass": "^4.0.1"
+  }
+}
