@@ -1,0 +1,211 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+.container {
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto; }
+  .container::after {
+    clear: both;
+    content: "";
+    display: block; }
+
+.row {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .row:last-child {
+    margin-right: 0; }
+
+.overflow-button {
+  border: 2px solid #134880;
+  background-color: transparent;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 5px;
+  color: #134880; }
+
+.small-other-elements {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  height: 80px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background-color: #888;
+  -webkit-border-radius: 0 0 10px 10px;
+  -moz-border-radius: 0 0 10px 10px;
+  border-radius: 0 0 10px 10px; }
+  .small-other-elements:last-child {
+    margin-right: 0; }
+
+.big-other-elements {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  height: 80px;
+  background-color: #888;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-border-radius: 0 0 10px 10px;
+  -moz-border-radius: 0 0 10px 10px;
+  border-radius: 0 0 10px 10px; }
+  .big-other-elements:last-child {
+    margin-right: 0; }
+  .big-other-elements h1 {
+    color: #fff;
+    margin-left: 12.5%;
+    font-size: 1.2em; }
+
+.full-other-elements {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  height: 80px;
+  background-color: #888;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-border-radius: 10px 10px 0 0;
+  -moz-border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px 0 0; }
+  .full-other-elements:last-child {
+    margin-right: 0; }
+  .full-other-elements h1 {
+    color: #fff;
+    margin-left: 8.33333%;
+    font-size: 1.2em; }
+
+.sliders {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.sliders-container {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%; }
+  .sliders-container:last-child {
+    margin-right: 0; }
+
+.slider-first-container {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .slider-first-container:last-child {
+    margin-right: 0; }
+
+.slider-second-container {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 74.41059%; }
+  .slider-second-container:last-child {
+    margin-right: 0; }
+
+.slider-list {
+  display: flex;
+  flex-flow: row-reverse;
+  list-style: none;
+  overflow: hidden; }
+  .slider-list li {
+    margin: 5px; }
+  .slider-list img {
+    height: 190px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px; }
+
+.buttons {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%; }
+  .buttons:last-child {
+    margin-right: 0; }
+  .buttons button {
+    width: 100%;
+    height: 50px;
+    border: 2px solid #134880;
+    background-color: transparent;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px; }
+
+.row-button {
+  float: left;
+  display: block;
+  margin-right: 16.03631%;
+  width: 100%; }
+  .row-button:last-child {
+    margin-right: 0; }
+
+.button {
+  float: left;
+  display: block;
+  margin-right: 16.03631%;
+  width: 41.98184%;
+  float: right;
+  margin-top: 10px; }
+  .button:last-child {
+    margin-right: 0; }
+
+.side-content {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%; }
+  .side-content:last-child {
+    margin-right: 0; }
+  .side-content h1 {
+    margin: 10px 0;
+    color: #134880; }
+  .side-content p {
+    margin: 20px 0;
+    color: #494B4D; }

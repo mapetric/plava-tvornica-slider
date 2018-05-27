@@ -1,0 +1,7 @@
+{
+"name": "Slider",
+"version": "0.0.1",
+"dependencies": {
+"neat": "1.8.0"  
+}
+}

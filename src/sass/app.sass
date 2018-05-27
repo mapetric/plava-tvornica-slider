@@ -1,0 +1,167 @@
+// ** VARIABLES **
+
+// * ENABLE VISUAL GRID BY UNCOMMENTING *
+
+// $visual-grid-color: red !global
+// $visual-grid: true !global
+// $grid-columns: 12 !global
+// $max-width: 50% !global
+
+// * COLORS FOR OTHER ELEMENTS *
+
+$other-elements-color: #888
+$other-elements-text-color: #fff
+
+// ** MIXINS **
+
+@mixin flexbox
+    display: -webkit-box
+    display: -webkit-flex
+    display: -moz-box
+    display: -ms-flexbox
+    display: flex
+
+@mixin flexbox-vertical-center
+    -ms-flex-align: center
+    -webkit-align-items: center
+    align-items: center
+
+@mixin flexbox-horizontal-center
+    -webkit-box-pack: center
+    -moz-box-pack: center
+    -ms-flex-pack: center
+    -webkit-justify-content: center
+    justify-content: center
+
+@mixin rounded($dimension, $corners)
+    @if $corners == all
+        -webkit-border-radius: $dimension
+        -moz-border-radius: $dimension
+        border-radius: $dimension
+    @else if $corners == bottom
+        -webkit-border-radius: 0 0 $dimension $dimension
+        -moz-border-radius: 0 0 $dimension $dimension
+        border-radius: 0 0 $dimension $dimension
+    @else
+        -webkit-border-radius: $dimension $dimension 0 0
+        -moz-border-radius: $dimension $dimension 0 0
+        border-radius: $dimension $dimension 0 0
+
+
+// ** IMPORTS **
+
+@import "../../bower_components/neat/app/assets/stylesheets/neat"
+
+// ** GLOBAL **
+*
+    margin: 0
+    padding: 0
+
+.container
+    @include outer-container(50%)
+
+.row
+    @include span-columns(12)
+    +flexbox
+
+// ** OTHER ELEMENTS **
+
+.overflow-button
+    border: 2px solid #134880
+    background-color: transparent
+    +rounded(5px, all)
+    padding: 5px
+    color: #134880
+
+.small-other-elements
+    @include span-columns(4 of 12)
+    height: 80px
+    +flexbox
+    +flexbox-vertical-center
+    +flexbox-horizontal-center
+    background-color: $other-elements-color
+    +rounded(10px, bottom)
+
+.big-other-elements
+    @include span-columns(8 of 12)
+    height: 80px
+    background-color: $other-elements-color
+    +flexbox
+    +flexbox-vertical-center
+    +rounded(10px, bottom)
+    h1
+        color: $other-elements-text-color
+        margin-left: (1/8)*100%
+        font-size: 1.2em
+
+.full-other-elements
+    @include span-columns(12 of 12)
+    height: 80px
+    background-color: $other-elements-color
+    +flexbox
+    +flexbox-vertical-center
+    +rounded(10px, top)
+    h1
+        color: $other-elements-text-color
+        margin-left: (1/12)*100%
+        font-size: 1.2em
+
+// ** APP **
+
+.sliders
+    margin-top: 40px
+    margin-bottom: 40px
+    height: 100%
+    +flexbox
+
+// * SLIDERS *
+
+.sliders-container
+    @include span-columns(8 of 12)
+
+.slider-first-container
+    @include span-columns(12 of 12)
+
+.slider-second-container
+    @include span-columns(9 of 12)
+
+.slider-list
+    display: flex
+    flex-flow: row-reverse
+    list-style: none
+    overflow: hidden
+    li
+        margin: 5px
+    img
+        height: 190px
+        +rounded(10px, all)
+
+// BUTTONS FOR SLIDERS
+
+.buttons
+    @include span-columns(3 of 12)
+    button
+        width: 100%
+        height: 50px
+        border: 2px solid #134880
+        background-color: transparent
+        +rounded(5px, all)
+
+.row-button
+    @include span-columns(2 of 2)
+
+.button
+    @include span-columns(1 of 2)
+    float: right
+    margin-top: 10px
+
+// * SIDE *
+
+.side-content
+    @include span-columns(4 of 12)
+    h1
+        margin: 10px 0
+        color: #134880
+    p
+        margin: 20px 0
+        color: #494B4D
