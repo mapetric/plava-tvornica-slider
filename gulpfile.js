@@ -6,7 +6,7 @@ const babel = require('gulp-babel');
 const livereload = require('gulp-livereload');
 
 gulp.task('sass-compile', function() {
-    return gulp.src('./app/scss/*.scss')
+    return gulp.src('./app/sass/*.sass')
         .pipe(sass())
         .pipe(gulp.dest('./app/css'))
         .pipe(livereload());
@@ -23,7 +23,7 @@ gulp.task('js-compile', function() {
 
 gulp.task('watch', function() {
     livereload.listen();
-    gulp.watch('./app/scss/*.scss', ['sass-compile']);
+    gulp.watch('./app/sass/*.sass', ['sass-compile']);
     gulp.watch('./app/ES6/*.js', ['js-compile']);
 });
 
