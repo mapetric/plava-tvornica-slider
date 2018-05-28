@@ -196,6 +196,9 @@ html {
   .button:last-child {
     margin-right: 0; }
 
+button:hover {
+  cursor: pointer; }
+
 .side-content {
   float: left;
   display: block;

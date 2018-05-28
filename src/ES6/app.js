@@ -14,6 +14,11 @@ const images = [
 
 const shiftLeft = () => {
     // grab the last element and move it to the first place in the list for all slider-list elements
+    const image = $('.push-left').children().first();
+    image.attr("src", "./assets/arrow-gray-left.png")
+    setTimeout(() => {
+        image.attr("src", "./assets/arrow-blue-left.png")
+    }, 200)
     $('.slider-list').each((i, slider) => {
         $(slider).children().last().prependTo($(slider))
     });
@@ -21,6 +26,11 @@ const shiftLeft = () => {
 
 const shiftRight = () => {
     // grab the first element and move it to the last place in the list for all slider-list elements
+    const image = $('.push-right').children().first();
+    image.attr("src", "./assets/arrow-gray-right.png")
+    setTimeout(() => {
+        image.attr("src", "./assets/arrow-blue-right.png")
+    }, 200)
     $('.slider-list').each((i, slider) => {
         $(slider).children().first().appendTo($(slider))
     });
@@ -58,7 +68,8 @@ const init = () => {
     // add event listeners for navigation and overflow buttons and assign images to sliders
     assignImages();
     $('.overflow-button').click(toggleOwerflow);
-    $('.push-right').click(shiftRight);
+    $('.push-right').click(shiftRight)
+
     $('.push-left').click(shiftLeft);
 }
 

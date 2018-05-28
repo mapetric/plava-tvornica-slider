@@ -4,6 +4,11 @@ var images = ["./assets/slider-image-1.jpg", "./assets/slider-image-2.jpg", "./a
 
 var shiftLeft = function shiftLeft() {
     // grab the last element and move it to the first place in the list for all slider-list elements
+    var image = $('.push-left').children().first();
+    image.attr("src", "./assets/arrow-gray-left.png");
+    setTimeout(function () {
+        image.attr("src", "./assets/arrow-blue-left.png");
+    }, 200);
     $('.slider-list').each(function (i, slider) {
         $(slider).children().last().prependTo($(slider));
     });
@@ -11,6 +16,11 @@ var shiftLeft = function shiftLeft() {
 
 var shiftRight = function shiftRight() {
     // grab the first element and move it to the last place in the list for all slider-list elements
+    var image = $('.push-right').children().first();
+    image.attr("src", "./assets/arrow-gray-right.png");
+    setTimeout(function () {
+        image.attr("src", "./assets/arrow-blue-right.png");
+    }, 200);
     $('.slider-list').each(function (i, slider) {
         $(slider).children().first().appendTo($(slider));
     });
@@ -49,6 +59,7 @@ var init = function init() {
     assignImages();
     $('.overflow-button').click(toggleOwerflow);
     $('.push-right').click(shiftRight);
+
     $('.push-left').click(shiftLeft);
 };
 
