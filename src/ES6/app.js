@@ -56,7 +56,7 @@ const assignImages = () => {
     // rounds up the number of half the images inside images array and assigns them accordingly
     let half = Math.ceil(images.length / 2);
     for (let i = 0; i < images.length; i++) {
-        if (i <= half) {
+        if (i < half) {
             $('.slider-list').first().append(createImage(images[i]));
         } else {
             $('.slider-list').last().append(createImage(images[i]));
